@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 ul{
@@ -76,4 +77,67 @@ main .contenedor_sobre button{
     padding: 10px 20px;
     border: none;
     color: white;
+}
+
+.tarjetas{
+    position: relative;
+    top: -240px;
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+
+}
+
+.tarjeta1{
+    width: 40%;
+    height: 550px;
+    background-color: rgb(0, 10, 10);
+    background-image: url(./mazda-distribuidores-cv-v2.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.tarjeta1 div{
+    margin-top: 40px;
+}
+
+.tarjeta1 div p:first-child{
+    text-transform: uppercase;
+}
+
+.tarjeta1:hover{
+    transform: scale(1.05); /* Escala un poco el div al hacer hover */
+    overflow: hidden; /* Asegura que el contenido adicional no sea visible */
+}
+
+.tarjeta2{
+    width: 80%;
+    height: 550px;
+    background-color: rgb(0, 10, 10);
+    background-image: url(./mazda-distribuidores-cs-v2.png);
+    background-size: cover;
+    background-position-y: -180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.tarjeta2 div{
+    margin-top: 40px;
+}
+
+.tarjeta2 div p:first-child{
+    text-transform: uppercase;
+}
+
+.tarjeta2:hover{
+    transform: scale(1.05); /* Escala un poco el div al hacer hover */
+    overflow: hidden; /* Asegura que el contenido adicional no sea visible */
 }
