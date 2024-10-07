@@ -2,7 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    -webkit-font-smoothing: antialiased;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
 }
 
 ul{
@@ -13,8 +18,7 @@ ul{
     }
     text-align: center;
     align-items: flex-end;
-    
-}
+    }
 header{
     display: flex;
     justify-content: center;
@@ -23,17 +27,27 @@ header{
         text-transform: uppercase;
     }
 }
+
+a{
+    color: #ffffff; /* Color del enlace no visitado (puedes elegir el color que prefieras) */
+    text-decoration: none; /* Opcional: elimina el subrayado, si lo deseas */
+}
+
+a:visited {
+    color: #ffffff; /* Establece el mismo color que el enlace no visitado */
+}
+
 .contenedor_header{
     position: relative;
     display: flex;
     justify-content: flex-end;
-    width: 95%;
+    width: 70%;
     height: 100px;
     /* background-color: antiquewhite; */
 }
 
 .header_izq{
-    width: 10%;
+width: 15%;
 }
 
 .header_der{
@@ -46,15 +60,40 @@ header{
 
 .header_der .up{
 display: flex;
+font-size:1.3rem;
+letter-spacing: 2px;
+
 img{
     margin-left: 15px;
+    margin-left: 30px;
 }
+li{
+    margin-left: 30px;
+}
+}
+
+.up a:hover{
+    transition: .3s ease-in-out;
+        color: #910a2d;    
+    
 }
 
 .header_der .down{
 margin-top: 0;
+font-size:1.6rem;
 }
 
+.down li:hover{
+    text-decoration: underline;
+    text-decoration-color:#910a2d; 
+    transition: .3s ease-in-out;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
 main .imagen_main{
     position: relative;
     top: -100px;
@@ -81,6 +120,14 @@ main .imagen_main .contenedor_sobre{
     justify-content: space-around;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_sobre p:last-child{
+    font-size: 4.5rem;
+}
 main .contenedor_sobre button{
     margin-top: 10px;
     background-color: #910a2d;
@@ -88,6 +135,10 @@ main .contenedor_sobre button{
     border: none;
     color: white;
     text-transform: uppercase;
+}
+
+main .contenedor_sobre button:hover{
+    background-color: #c60303;
 }
 
 .tarjetas{
@@ -98,7 +149,6 @@ main .contenedor_sobre button{
     flex-wrap: wrap;
     justify-content: center;
     background-color: black;
-
 }
 
 .tarjeta1{
@@ -116,7 +166,6 @@ main .contenedor_sobre button{
 
 .tarjetas #prueba_de{
     background-image: url(./mazda-distribuidores-pm-v2.png);
-
 }
 
 .tarjeta1 div{
@@ -166,9 +215,9 @@ main .contenedor_sobre button{
 
 .ubicación{
     display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 80px;
+    width: 80%;
+    margin: 0 20px;
+    align-self: center;
 }
 .datos{
     display: flex;
@@ -188,9 +237,32 @@ flex-direction: column;
         width: 100%;
     }
 }
+.mapa div{
+position: relative;
+}
+
+.mapa .link-map{
+    position: absolute;
+    bottom: 9px;
+    display: flex ;
+    align-items: center;
+    color: white;
+    z-index: 100;
+    background-color: #000000;
+    width: 170px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 2rem;
+}
+
+#mapax{
+    color: white;
+    font-size: 1.5rem;
+}
 .ubicación .direccion{
 display: flex;
 justify-content: flex-start;
+font-size: 2rem;
 ul{
     align-items: flex-start;
     display: flex;
@@ -211,6 +283,7 @@ li:first-child{
     flex-direction: column;
     width: 50%;
     margin-top: 15px;
+    font-size: 1.5rem;
     ul{
         display: flex;
         flex-direction: column;
@@ -219,6 +292,7 @@ li:first-child{
 
 .ubicación .inferior{
     display: flex;
+    font-size: 1.5rem;
     ul{
         display: flex;
         flex-direction: column;
@@ -232,4 +306,40 @@ li:first-child{
             align-items: flex-start;            
         }
     }
+    li:first-child{
+        font-size: 1.5rem;
+        padding: 5px 0;
+
+    }
+}
+
+.material-icons{
+    font-size: 2px; /* Ajustar el tamaño del ícono */
+    color: #000000;  /* Cambiar el color del ícono */
+  }
+
+.chatbot{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 99;
+}
+
+.chatbot img{
+    width: 45px;
+}
+
+.chatbot span{
+    background-color: #5aa83b;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 1px 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
